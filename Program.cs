@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructureAndAlgorithms.Arrays;
+using System;
 
 namespace DataStructureAndAlgorithms
 {
@@ -6,7 +7,9 @@ namespace DataStructureAndAlgorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(ReverseString.Reverse("My Name is Andy"));
+            Console.WriteLine(ReverseString.Reverse("My Name is Miles"));
         }
-    }
+    }  
 }
+ 
