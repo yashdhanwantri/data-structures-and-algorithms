@@ -6,24 +6,29 @@ namespace DataStructureAndAlgorithms.Arrays
 {
     class MergeSortedArrays
     {
-        public int[] MergeArrays(int[] input1, int[] input2)
+        public static int[] MergeArrays(int[] inputA, int[] inputB)
         {
-            int[] result = new int[input1.Length + input2.Length];
-            int input1Counter = 0;
-            int input2Counter = 0;
+            int[] result = new int[inputA.Length + inputB.Length];
+            if (inputA.Length == 0)
+                return inputB;
+            else if (inputB.Length == 0)
+                return inputA;
+            int counterA = 0;
+            int counterB = 0;
             int resultCounter = 0;
-            int length = input1.Length > input2.Length ? input1.Length : input2.Length;
-            bool arrayMerged = false;
-            while(!arrayMerged)
+            while(resultCounter!= result.Length)
             {
-                if(input1[input1Counter] < input2[input2Counter])
+                if(counterA<inputA.Length &&  (counterB == inputB.Length || inputA[counterA]<inputB[counterB]))
                 {
-                    result[resultCounter] = input1[input1Counter];
+                    result[resultCounter] = inputA[counterA];
+                    counterA++;
                 }
                 else
                 {
-                    result[resultCounter] = input2[input2Counter];
+                    result[resultCounter] = inputB[counterB];
+                    counterB++;
                 }
+                resultCounter++;
             }
             return result;
         }
