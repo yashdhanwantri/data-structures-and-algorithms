@@ -15,6 +15,10 @@ namespace DataStructureAndAlgorithms.LinkedList
             this.Head = node;
         }
 
+        public void RemoveFirst()
+        {
+            Head = Head.Next;
+        }
         public void InsertAt(int index, T data)
         {
             Node node = new Node(data);
