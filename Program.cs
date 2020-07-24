@@ -23,16 +23,19 @@ namespace DataStructureAndAlgorithms
             //Console.WriteLine($"Second Largest Element in an Array is: {result}");
 
             //LinkedList Implementation
-            LinkedList<int> myLinkedList = new LinkedList<int>();
-            myLinkedList.InsertFront(10);
-            myLinkedList.InsertLast(20);
-            myLinkedList.InsertLast(30);
-            myLinkedList.InsertLast(40);
+            //LinkedList<int> myLinkedList = new LinkedList<int>();
+            //myLinkedList.InsertFront(10);
+            //myLinkedList.InsertLast(20);
+            //myLinkedList.InsertLast(30);
+            //myLinkedList.InsertLast(40);
 
-            myLinkedList.Print();
-            myLinkedList.InsertAt(3, 25);
+            //myLinkedList.Print();
+            //myLinkedList.InsertAt(3, 25);
 
-            myLinkedList.Print();
+            //myLinkedList.Print();
+
+            //ArrayList Implementation
+            MyArrayList.TestMyArrayList();
         }
     }  
 }
