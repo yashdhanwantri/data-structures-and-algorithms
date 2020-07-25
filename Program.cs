@@ -1,5 +1,6 @@
 ﻿using DataStructureAndAlgorithms.Arrays;
 using DataStructureAndAlgorithms.Challenges;
+using DataStructureAndAlgorithms.HashTable;
 using DataStructureAndAlgorithms.LinkedList;
 using System;
 
@@ -35,7 +36,16 @@ namespace DataStructureAndAlgorithms
             //myLinkedList.Print();
 
             //ArrayList Implementation
-            MyArrayList.TestMyArrayList();
+            //MyArrayList.TestMyArrayList();
+
+            //Hash Table Usage
+            MyHashTable hashTable = new MyHashTable(50);
+            hashTable.set("Pineapple", 50);
+            hashTable.set("Apple", 10);
+            Console.WriteLine(hashTable.get("Pineapple"));
+            Console.WriteLine(hashTable.get("Apple"));
+            Console.WriteLine(hashTable.get("Grapes"));
+            
         }
     }  
 }
