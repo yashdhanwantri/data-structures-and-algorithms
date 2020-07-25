@@ -39,13 +39,14 @@ namespace DataStructureAndAlgorithms
             //MyArrayList.TestMyArrayList();
 
             //Hash Table Usage
-            MyHashTable hashTable = new MyHashTable(50);
-            hashTable.set("Pineapple", 50);
-            hashTable.set("Apple", 10);
-            Console.WriteLine(hashTable.get("Pineapple"));
-            Console.WriteLine(hashTable.get("Apple"));
-            Console.WriteLine(hashTable.get("Grapes"));
-            
+            MyHashTable hashTable = new MyHashTable(2);
+            hashTable.Set("Pineapple", 50);
+            hashTable.Set("Apple", 10);
+            hashTable.Set("Grapes", 90);
+            Console.WriteLine(hashTable.Get("Pineapple"));
+            Console.WriteLine(hashTable.Get("Apple"));
+            Console.WriteLine(hashTable.Get("Grapes"));
+            hashTable.Print();
         }
     }  
 }
