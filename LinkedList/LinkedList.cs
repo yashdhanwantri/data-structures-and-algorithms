@@ -6,6 +6,13 @@ namespace DataStructureAndAlgorithms.LinkedList
 {
     public class LinkedList<T>
     {
+
+        public LinkedList(T data)
+        {
+            Head = new Node(data);
+            Tail = Head;
+            Length = 1;
+        }
         public Node Head { get; private set; }
         public Node Tail { get; private set; }
         public int Length { get; private set; }
@@ -13,6 +20,8 @@ namespace DataStructureAndAlgorithms.LinkedList
         {
             this.Head = new Node(data) { Next = Head };
             this.Length++;
+
+            Console.WriteLine($"{data} inserted on front of Linked List, new Head Node is: {Head.Data} and Tail Node is: {Tail.Data}");
         }
         public void RemoveFirst()
         {
@@ -37,6 +46,7 @@ namespace DataStructureAndAlgorithms.LinkedList
             this.Tail.Next = new Node(data);
             this.Tail = Tail.Next;
             this.Length++;
+            Console.WriteLine($"{data} appended on Linked List, new Head Node is: {Head.Data} and Tail Node is: {Tail.Data}");
         }
 
         public void Print()
