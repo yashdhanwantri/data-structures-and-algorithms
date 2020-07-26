@@ -24,13 +24,15 @@ namespace DataStructureAndAlgorithms
             //Console.WriteLine($"Second Largest Element in an Array is: {result}");
 
             //LinkedList Implementation
-            //LinkedList<int> myLinkedList = new LinkedList<int>();
-            //myLinkedList.InsertFront(10);
-            //myLinkedList.InsertLast(20);
-            //myLinkedList.InsertLast(30);
-            //myLinkedList.InsertLast(40);
+            LinkedList<int> myLinkedList = new LinkedList<int>();
+            myLinkedList.InsertFront(10);
+            myLinkedList.Append(20);
+            myLinkedList.Append(30);
+            myLinkedList.Append(40);
 
-            //myLinkedList.Print();
+            myLinkedList.Print();
+            Console.WriteLine($"Length of Linked List is: {myLinkedList.Length}");
+            Console.WriteLine($"Length of Linked List is: {myLinkedList.Tail}");
             //myLinkedList.InsertAt(3, 25);
 
             //myLinkedList.Print();
@@ -50,7 +52,7 @@ namespace DataStructureAndAlgorithms
 
             //First Recurring Character
 
-            Console.WriteLine(FirstRecurringCharacter.FindFirstRecurringCharacter("YashDhanwantri"));
+            //Console.WriteLine(FirstRecurringCharacter.FindFirstRecurringCharacter("YashDhanwantri"));
 
         }
     }  

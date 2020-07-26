@@ -6,15 +6,14 @@ namespace DataStructureAndAlgorithms.LinkedList
 {
     public class LinkedList<T>
     {
-        public Node Head { get; set; }
-
+        public Node Head { get; private set; }
+        public Node Tail { get; private set; }
+        public int Length { get; private set; }
         public void InsertFront(T data)
         {
-            Node node = new Node(data);
-            node.Next = Head;
-            this.Head = node;
+            this.Head = new Node(data) { Next = Head };
+            this.Length++;
         }
-
         public void RemoveFirst()
         {
             Head = Head.Next;
@@ -33,16 +32,11 @@ namespace DataStructureAndAlgorithms.LinkedList
             node.Next = insertAfter.Next;
             insertAfter.Next = node;
         }
-        public void InsertLast(T data)
+        public void Append(T data)
         {
-            Node node = new Node(data);
-
-            Node nextNode = Head;
-            while (nextNode.Next != null)
-            {
-                nextNode = nextNode.Next;
-            }
-            nextNode.Next = node;
+            this.Tail.Next = new Node(data);
+            this.Tail = Tail.Next;
+            this.Length++;
         }
 
         public void Print()
@@ -54,16 +48,18 @@ namespace DataStructureAndAlgorithms.LinkedList
                 node = node.Next;
             }
         }
-
         public class Node
         {
             public T Data { get; set; }
             public Node Next { get; set; }
-
             public Node(T data)
             {
                 Data = data;
                 Next = null;
+            }
+            public override string ToString()
+            {
+                return $"{Data}";
             }
         }
     }
