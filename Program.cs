@@ -24,20 +24,52 @@ namespace DataStructureAndAlgorithms
             //Console.WriteLine($"Second Largest Element in an Array is: {result}");
 
             //LinkedList Implementation
-            LinkedList<int> myLinkedList = new LinkedList<int>(10);
-            myLinkedList.InsertFront(20);
+            SinglyLinkedList<int> myLinkedList = new SinglyLinkedList<int>(10);
+            myLinkedList.Prepend(10);
+            myLinkedList.Append(20);
             myLinkedList.Append(30);
             myLinkedList.Append(40);
-            myLinkedList.Append(50);
-
+            myLinkedList.InsertAt(0, 5);
+            myLinkedList.InsertAt(3, 35);
+            myLinkedList.InsertAt(6, 55);
+            myLinkedList.InsertAt(7, 90);
+            myLinkedList.TraverseToIndex(0);
+            myLinkedList.TraverseToIndex(1);
+            myLinkedList.TraverseToIndex(2);
+            myLinkedList.TraverseToIndex(3);
+            myLinkedList.TraverseToIndex(4);
+            myLinkedList.TraverseToIndex(5);
+            myLinkedList.TraverseToIndex(6);
+            myLinkedList.TraverseToIndex(7);
+            myLinkedList.TraverseToIndex(8);
             myLinkedList.Print();
             Console.WriteLine($"Length of Linked List is: {myLinkedList.Length}");
             Console.WriteLine($"Head of Linked List is: {myLinkedList.Head}");
             Console.WriteLine($"Tail of Linked List is: {myLinkedList.Tail}");
-            //myLinkedList.InsertAt(3, 25);
 
-            //myLinkedList.Print();
+            myLinkedList.Remove(1);
+            myLinkedList.Print();
+            Console.WriteLine($"Length of Linked List is: {myLinkedList.Length}");
+            Console.WriteLine($"Head of Linked List is: {myLinkedList.Head}");
+            Console.WriteLine($"Tail of Linked List is: {myLinkedList.Tail}");
 
+            myLinkedList.Remove(2);
+            myLinkedList.Print();
+            Console.WriteLine($"Length of Linked List is: {myLinkedList.Length}");
+            Console.WriteLine($"Head of Linked List is: {myLinkedList.Head}");
+            Console.WriteLine($"Tail of Linked List is: {myLinkedList.Tail}");
+
+            myLinkedList.Remove(0);
+            myLinkedList.Print();
+            Console.WriteLine($"Length of Linked List is: {myLinkedList.Length}");
+            Console.WriteLine($"Head of Linked List is: {myLinkedList.Head}");
+            Console.WriteLine($"Tail of Linked List is: {myLinkedList.Tail}");
+
+            myLinkedList.Remove(myLinkedList.Length-1);
+            myLinkedList.Print();
+            Console.WriteLine($"Length of Linked List is: {myLinkedList.Length}");
+            Console.WriteLine($"Head of Linked List is: {myLinkedList.Head}");
+            Console.WriteLine($"Tail of Linked List is: {myLinkedList.Tail}");
             //ArrayList Implementation
             //MyArrayList.TestMyArrayList();
 
