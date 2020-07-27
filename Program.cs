@@ -72,57 +72,64 @@ namespace DataStructureAndAlgorithms
             //Console.WriteLine($"Tail of Linked List is: {myLinkedList.Tail}");
 
             //*********************Doubly Linked List Implementation*************************
-            DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>(10);
-            Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
-            doublyLinkedList.Print();
+            //DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>(10);
+            //Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
+            //doublyLinkedList.Print();
 
-            doublyLinkedList.Append(20);
-            Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
-            doublyLinkedList.Print();
+            //doublyLinkedList.Append(20);
+            //Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
+            //doublyLinkedList.Print();
 
-            doublyLinkedList.Prepend(5);
-            Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
-            doublyLinkedList.Print();
+            //doublyLinkedList.Prepend(5);
+            //Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
+            //doublyLinkedList.Print();
 
-            doublyLinkedList.Append(30);
-            Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
-            doublyLinkedList.Print();
+            //doublyLinkedList.Append(30);
+            //Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
+            //doublyLinkedList.Print();
 
-            doublyLinkedList.Prepend(4);
-            Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
-            doublyLinkedList.Print();
+            //doublyLinkedList.Prepend(4);
+            //Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
+            //doublyLinkedList.Print();
 
-            doublyLinkedList.Append(40);
-            Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
-            doublyLinkedList.Print();
+            //doublyLinkedList.Append(40);
+            //Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
+            //doublyLinkedList.Print();
 
-            doublyLinkedList.Prepend(3);
-            Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
-            doublyLinkedList.Print();
+            //doublyLinkedList.Prepend(3);
+            //Console.WriteLine($"Length of Linked List: {doublyLinkedList.Length}. Head Node: {doublyLinkedList.Head}. Tail Node: {doublyLinkedList.Tail}");
+            //doublyLinkedList.Print();
 
-            doublyLinkedList.Remove(3);
-            doublyLinkedList.Print();
-            doublyLinkedList.Remove(0);
-            doublyLinkedList.Print();
-            doublyLinkedList.Remove(doublyLinkedList.Length - 1);
-            doublyLinkedList.Print();
-            doublyLinkedList.Remove(2);
-            doublyLinkedList.Print();
+            //doublyLinkedList.Remove(3);
+            //doublyLinkedList.Print();
+            //doublyLinkedList.Remove(0);
+            //doublyLinkedList.Print();
+            //doublyLinkedList.Remove(doublyLinkedList.Length - 1);
+            //doublyLinkedList.Print();
+            //doublyLinkedList.Remove(2);
+            //doublyLinkedList.Print();
 
-            doublyLinkedList.InsertAt(2, 20);
-            doublyLinkedList.Print();
-            doublyLinkedList.InsertAt(2, 10);
-            doublyLinkedList.Print();
-            doublyLinkedList.InsertAt(2, 7);
-            doublyLinkedList.Print();
-            doublyLinkedList.InsertAt(0, 3);
-            doublyLinkedList.Print();
-            doublyLinkedList.InsertAt(7, 40);
-            doublyLinkedList.Print();
+            //doublyLinkedList.InsertAt(2, 20);
+            //doublyLinkedList.Print();
+            //doublyLinkedList.InsertAt(2, 10);
+            //doublyLinkedList.Print();
+            //doublyLinkedList.InsertAt(2, 7);
+            //doublyLinkedList.Print();
+            //doublyLinkedList.InsertAt(0, 3);
+            //doublyLinkedList.Print();
+            //doublyLinkedList.InsertAt(7, 40);
+            //doublyLinkedList.Print();
 
+            //************Reverse A LinkedList*********************
 
+            SinglyLinkedList<int> singlyLinkedList = new SinglyLinkedList<int>(10);
+            singlyLinkedList.Append(20);
+            singlyLinkedList.Append(30);
+            singlyLinkedList.Append(40);
+            singlyLinkedList.Append(50);
 
-
+            var reversedLinkedList = ReverseLinkedList.ReverseLinkList(singlyLinkedList);
+            reversedLinkedList.Print();
 
             //*****************ArrayList Implementation********************
             //MyArrayList.TestMyArrayList();
@@ -139,6 +146,7 @@ namespace DataStructureAndAlgorithms
 
             //**********First Recurring Character*******************
             //Console.WriteLine(FirstRecurringCharacter.FindFirstRecurringCharacter("YashDhanwantri"));
+
 
         }
     }  
