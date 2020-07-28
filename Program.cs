@@ -128,9 +128,11 @@ namespace DataStructureAndAlgorithms
             singlyLinkedList.Append(40);
             singlyLinkedList.Append(50);
 
-            var reversedLinkedList = ReverseLinkedList.ReverseLinkList(singlyLinkedList);
-            reversedLinkedList.Print();
+            //var reversedLinkedList = ReverseLinkedList.ReverseLinkList(singlyLinkedList);
+            //reversedLinkedList.Print();
 
+            ReverseLinkedList.ReverseLinkListVer2(singlyLinkedList);
+            singlyLinkedList.Print();
             //*****************ArrayList Implementation********************
             //MyArrayList.TestMyArrayList();
 

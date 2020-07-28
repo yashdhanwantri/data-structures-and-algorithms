@@ -24,5 +24,27 @@ namespace DataStructureAndAlgorithms.Challenges
             }
             return resultLinkedList;
         }
+
+        public static void ReverseLinkListVer2(SinglyLinkedList<int> linkedList)
+        {
+            if(linkedList.Head.Next!=null)
+            {
+                var firstNode = linkedList.Head;
+                var secondNode = firstNode.Next;
+                while (secondNode.Next != null)
+                {
+                    firstNode.Next = secondNode.Next;
+                    secondNode.Next = linkedList.Head;
+                    linkedList.Head = secondNode;
+                    secondNode = firstNode.Next;
+                }
+                secondNode.Next = linkedList.Head;
+                linkedList.Head = secondNode;
+                firstNode.Next = null;
+                linkedList.Tail = firstNode;
+                
+            }
+                
+        }
     }
 }

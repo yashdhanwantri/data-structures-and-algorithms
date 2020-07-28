@@ -13,8 +13,8 @@ namespace DataStructureAndAlgorithms.LinkedList
             Tail = Head;
             Length = 1;
         }
-        public Node Head { get; private set; }
-        public Node Tail { get; private set; }
+        public Node Head { get; set; }
+        public Node Tail { get; set; }
         public int Length { get; private set; }
         public void Prepend(T data)
         {
