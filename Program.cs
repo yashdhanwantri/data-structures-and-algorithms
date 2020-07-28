@@ -130,9 +130,10 @@ namespace DataStructureAndAlgorithms
 
             //var reversedLinkedList = ReverseLinkedList.ReverseLinkList(singlyLinkedList);
             //reversedLinkedList.Print();
-
+            Console.WriteLine($"Before Reversing Linked List | Head: {singlyLinkedList.Head}. Tail: {singlyLinkedList.Tail}. Length: {singlyLinkedList.Length}");
             ReverseLinkedList.ReverseLinkListVer2(singlyLinkedList);
             singlyLinkedList.Print();
+            Console.WriteLine($"After Reversing Linked List | Head: {singlyLinkedList.Head}. Tail: {singlyLinkedList.Tail}. Length: {singlyLinkedList.Length}");
             //*****************ArrayList Implementation********************
             //MyArrayList.TestMyArrayList();
 

@@ -31,16 +31,13 @@ namespace DataStructureAndAlgorithms.Challenges
             {
                 var firstNode = linkedList.Head;
                 var secondNode = firstNode.Next;
-                while (secondNode.Next != null)
+                while (firstNode.Next != null)
                 {
                     firstNode.Next = secondNode.Next;
                     secondNode.Next = linkedList.Head;
                     linkedList.Head = secondNode;
                     secondNode = firstNode.Next;
                 }
-                secondNode.Next = linkedList.Head;
-                linkedList.Head = secondNode;
-                firstNode.Next = null;
                 linkedList.Tail = firstNode;
                 
             }
