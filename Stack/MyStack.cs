@@ -4,6 +4,10 @@ using System.Text;
 
 namespace DataStructureAndAlgorithms.Stack
 {
+    /// <summary>
+    /// Implementation for Stack
+    /// </summary>
+    /// <typeparam name="T"> Generic Type</typeparam>
     public class StackNode<T>
     {
         public StackNode<T> Next { get; set; }
