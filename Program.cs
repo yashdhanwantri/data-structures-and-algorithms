@@ -2,6 +2,7 @@
 using DataStructureAndAlgorithms.Challenges;
 using DataStructureAndAlgorithms.HashTable;
 using DataStructureAndAlgorithms.LinkedList;
+using DataStructureAndAlgorithms.Queue;
 using DataStructureAndAlgorithms.Stack;
 using System;
 
@@ -153,55 +154,65 @@ namespace DataStructureAndAlgorithms
             //Console.WriteLine(FirstRecurringCharacter.FindFirstRecurringCharacter("YashDhanwantri"));
 
             //************** Stack Implementation *****************
-            MyStack<int> myStack = new MyStack<int>();
-            myStack.Push(10);
-            Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            myStack.Push(20);
-            Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            myStack.Push(30);
-            Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            myStack.Push(40);
-            Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            myStack.Push(50);
-            Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            myStack.Pop();
-            Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            myStack.Pop();
-            Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            myStack.Pop();
-            Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            myStack.Pop();
-            Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            myStack.Pop();
-            try
-            {
-                myStack.Pop();
-                Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            //MyStack<int> myStack = new MyStack<int>();
+            //myStack.Push(10);
+            //Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //myStack.Push(20);
+            //Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //myStack.Push(30);
+            //Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //myStack.Push(40);
+            //Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //myStack.Push(50);
+            //Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //myStack.Pop();
+            //Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //myStack.Pop();
+            //Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //myStack.Pop();
+            //Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //myStack.Pop();
+            //Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //myStack.Pop();
+            //try
+            //{
+            //    myStack.Pop();
+            //    Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //}
+            //catch(Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
 
-            try
-            {   
-                myStack.Pop();
-                Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            try
-            {
-                Console.WriteLine($"Peeking top element: {myStack.Peek()}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            
+            //try
+            //{   
+            //    myStack.Pop();
+            //    Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //try
+            //{
+            //    Console.WriteLine($"Peeking top element: {myStack.Peek()}");
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
 
+            //Queue Implementation
+            MyQueue<string> myQueue = new MyQueue<string>();
+            myQueue.Enqueue("Person 1");
+            myQueue.Enqueue("Person 2");
+            myQueue.Enqueue("Person 3");
+            myQueue.Enqueue("Person 4");
+            myQueue.Dequeue();
+            myQueue.Dequeue();
+            myQueue.Dequeue();
+            myQueue.Dequeue();
+            myQueue.Dequeue();
         }
     }  
 }
