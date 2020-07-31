@@ -20,37 +20,43 @@ namespace DataStructureAndAlgorithms.Stack
     }
     public class MyStack<T>
     {
-        StackNode<T> top;
-        StackNode<T> bottom;
-        int Length;
+        public StackNode<T> Top { get; private set; }
+        public StackNode<T> Bottom { get; private set; }
+        public int Length { get; private set; }
         public MyStack()
         {
-            top = null;
-            bottom = null;
+            Top = null;
+            Bottom = null;
             Length = 0;
         }
 
-        public void Peek()
+        public T Peek()
         {
-
+            if (Length == 0)
+                throw new Exception("Stack Empty");
+            return Top.Data;
         }
         public void Push(T data)
         {
             if(Length == 0)
             {
-                top = new StackNode<T>(data);
-                bottom = top;
+                Top = new StackNode<T>(data);
+                Bottom = Top;
             }
             else
             {
-                top.Next = new StackNode<T>(data);
-                top = top.Next;
+                Top = new StackNode<T>(data) { Next = Top };
             }
             Length++;
         }
-        public void Pop()
+        public T Pop()
         {
-
+            if (Length == 0)
+                throw new Exception("Stack Empty");
+            var item = Top.Data;
+            Top = Top.Next;
+            Length--;
+            return item;
         }
     }
 }

@@ -2,6 +2,7 @@
 using DataStructureAndAlgorithms.Challenges;
 using DataStructureAndAlgorithms.HashTable;
 using DataStructureAndAlgorithms.LinkedList;
+using DataStructureAndAlgorithms.Stack;
 using System;
 
 namespace DataStructureAndAlgorithms
@@ -122,18 +123,19 @@ namespace DataStructureAndAlgorithms
 
             //************Reverse A LinkedList*********************
 
-            SinglyLinkedList<int> singlyLinkedList = new SinglyLinkedList<int>(10);
-            singlyLinkedList.Append(20);
-            singlyLinkedList.Append(30);
-            singlyLinkedList.Append(40);
-            singlyLinkedList.Append(50);
+            //SinglyLinkedList<int> singlyLinkedList = new SinglyLinkedList<int>(10);
+            //singlyLinkedList.Append(20);
+            //singlyLinkedList.Append(30);
+            //singlyLinkedList.Append(40);
+            //singlyLinkedList.Append(50);
 
             //var reversedLinkedList = ReverseLinkedList.ReverseLinkList(singlyLinkedList);
             //reversedLinkedList.Print();
-            Console.WriteLine($"Before Reversing Linked List | Head: {singlyLinkedList.Head}. Tail: {singlyLinkedList.Tail}. Length: {singlyLinkedList.Length}");
-            ReverseLinkedList.ReverseLinkListVer2(singlyLinkedList);
-            singlyLinkedList.Print();
-            Console.WriteLine($"After Reversing Linked List | Head: {singlyLinkedList.Head}. Tail: {singlyLinkedList.Tail}. Length: {singlyLinkedList.Length}");
+            //Console.WriteLine($"Before Reversing Linked List | Head: {singlyLinkedList.Head}. Tail: {singlyLinkedList.Tail}. Length: {singlyLinkedList.Length}");
+            //ReverseLinkedList.ReverseLinkListVer2(singlyLinkedList);
+            //singlyLinkedList.Print();
+            //Console.WriteLine($"After Reversing Linked List | Head: {singlyLinkedList.Head}. Tail: {singlyLinkedList.Tail}. Length: {singlyLinkedList.Length}");
+
             //*****************ArrayList Implementation********************
             //MyArrayList.TestMyArrayList();
 
@@ -150,6 +152,55 @@ namespace DataStructureAndAlgorithms
             //**********First Recurring Character*******************
             //Console.WriteLine(FirstRecurringCharacter.FindFirstRecurringCharacter("YashDhanwantri"));
 
+            //************** Stack Implementation *****************
+            MyStack<int> myStack = new MyStack<int>();
+            myStack.Push(10);
+            Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            myStack.Push(20);
+            Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            myStack.Push(30);
+            Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            myStack.Push(40);
+            Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            myStack.Push(50);
+            Console.WriteLine($"Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            myStack.Pop();
+            Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            myStack.Pop();
+            Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            myStack.Pop();
+            Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            myStack.Pop();
+            Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            myStack.Pop();
+            try
+            {
+                myStack.Pop();
+                Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            try
+            {   
+                myStack.Pop();
+                Console.WriteLine($"[POP] Top item: {myStack.Top.Data}. Bottom Item: {myStack.Bottom.Data}. Length: {myStack.Length}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            try
+            {
+                Console.WriteLine($"Peeking top element: {myStack.Peek()}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
 
         }
     }  
