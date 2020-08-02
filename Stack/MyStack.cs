@@ -4,10 +4,6 @@ using System.Text;
 
 namespace DataStructureAndAlgorithms.Stack
 {
-    /// <summary>
-    /// Implementation for Stack
-    /// </summary>
-    /// <typeparam name="T"> Generic Type</typeparam>
     public class StackNode<T>
     {
         public StackNode<T> Next { get; set; }
@@ -18,6 +14,10 @@ namespace DataStructureAndAlgorithms.Stack
             Next = null;
         }
     }
+    /// <summary>
+    /// Implementation for Stack
+    /// </summary>
+    /// <typeparam name="T"> Generic Type</typeparam>
     public class MyStack<T>
     {
         public StackNode<T> Top { get; private set; }
@@ -57,6 +57,12 @@ namespace DataStructureAndAlgorithms.Stack
             Top = Top.Next;
             Length--;
             return item;
+        }
+        public bool IsEmpty()
+        {
+            if (Length == 0)
+                return true;
+            return false;
         }
     }
 }

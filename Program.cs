@@ -202,17 +202,40 @@ namespace DataStructureAndAlgorithms
             //    Console.WriteLine(ex.Message);
             //}
 
-            //Queue Implementation
-            MyQueue<string> myQueue = new MyQueue<string>();
-            myQueue.Enqueue("Person 1");
-            myQueue.Enqueue("Person 2");
-            myQueue.Enqueue("Person 3");
-            myQueue.Enqueue("Person 4");
-            myQueue.Dequeue();
-            myQueue.Dequeue();
-            myQueue.Dequeue();
-            myQueue.Dequeue();
-            myQueue.Dequeue();
+            //****************************Queue Implementation**********************************
+            //MyQueue<string> myQueue = new MyQueue<string>();
+            //myQueue.Enqueue("Person 1");
+            //myQueue.Enqueue("Person 2");
+            //myQueue.Enqueue("Person 3");
+            //myQueue.Enqueue("Person 4");
+            //myQueue.Dequeue();
+            //myQueue.Dequeue();
+            //myQueue.Dequeue();
+            //myQueue.Dequeue();
+            //myQueue.Dequeue();
+
+            //***********************************Queue Implementation using Stack**************************
+            QueueUsingStack<int> queue = new QueueUsingStack<int>();
+            queue.Enqueue(1);
+            Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            queue.Enqueue(2);
+            Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            queue.Enqueue(3);
+            Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            queue.Enqueue(4);
+            Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+
+            queue.Dequeue();
+            Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            queue.Dequeue();
+            Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            queue.Enqueue(5);
+            Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            queue.Dequeue();
+            Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            queue.Dequeue();
+            Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            queue.Dequeue();
         }
     }  
 }
