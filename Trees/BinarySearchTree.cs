@@ -73,11 +73,9 @@ namespace DataStructureAndAlgorithms.Trees
             else
             {
                 var NodeToCompare = Root;
-                while (true)
+                while (NodeToCompare!=null)
                 {
-                    if (NodeToCompare == null)
-                        return null;
-                    else if (NodeToCompare.Data == Data)
+                    if (NodeToCompare.Data == Data)
                     {
                         return NodeToCompare;
                     }
@@ -93,8 +91,8 @@ namespace DataStructureAndAlgorithms.Trees
                             return null;
                         NodeToCompare = NodeToCompare.Left;
                     }
-                        
                 }
+                return null;
             }
         }
     }
