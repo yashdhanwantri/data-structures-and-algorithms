@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataStructureAndAlgorithms.Trees
 {
-    sealed class TreeNode
+    internal class TreeNode
     {
         internal int Data { get; set; }
         internal TreeNode Left { get; set; }
@@ -16,30 +16,52 @@ namespace DataStructureAndAlgorithms.Trees
             this.Right = null;
         }
     }
-    class BinarySearchTree
+    public class BinarySearchTree
     {
-        public TreeNode Root { get; private set; }
-        BinarySearchTree()
+        TreeNode Root { get; set; }
+        public BinarySearchTree()
         {
             Root = null;
         }
 
         public void Insert(int Data)
         {
+            var nodeToInsert = new TreeNode(Data);
             if (Root == null)
-                Root = new TreeNode(Data);
-            else 
+                Root = nodeToInsert;
+            else
             {
-                if (Root.Data < Data)
+                var currentNode = Root;
+                while (true)
                 {
-                    if (Root.Left == null)
-                        Root.Left = new TreeNode(Data);
+                    if (Data > currentNode.Data)
+                    {
+                        if (currentNode.Right == null)
+                        {
+                            currentNode.Right = nodeToInsert;
+                            break;
+                        }
+                        currentNode = currentNode.Right;
+                    }
+                    else if (Data < currentNode.Data)
+                    {
+                        if (currentNode.Left == null)
+                        {
+                            currentNode.Left = nodeToInsert;
+                            break;
+                        }
+                        currentNode = currentNode.Left;
+                    }
+                    else
+                        throw new Exception("Duplicate Element not allowed");
                 }
+                
             }
         }
-        public bool Lookup(int Data)
+        public int? Lookup(int Data)
         {
-            return false;
+            
+            return null;
         }
 
     }

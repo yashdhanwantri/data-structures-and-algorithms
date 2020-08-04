@@ -4,6 +4,7 @@ using DataStructureAndAlgorithms.HashTable;
 using DataStructureAndAlgorithms.LinkedList;
 using DataStructureAndAlgorithms.Queue;
 using DataStructureAndAlgorithms.Stack;
+using DataStructureAndAlgorithms.Trees;
 using System;
 
 namespace DataStructureAndAlgorithms
@@ -215,27 +216,38 @@ namespace DataStructureAndAlgorithms
             //myQueue.Dequeue();
 
             //***********************************Queue Implementation using Stack**************************
-            QueueUsingStack<int> queue = new QueueUsingStack<int>();
-            queue.Enqueue(1);
-            Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
-            queue.Enqueue(2);
-            Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
-            queue.Enqueue(3);
-            Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
-            queue.Enqueue(4);
-            Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            //QueueUsingStack<int> queue = new QueueUsingStack<int>();
+            //queue.Enqueue(1);
+            //Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            //queue.Enqueue(2);
+            //Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            //queue.Enqueue(3);
+            //Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            //queue.Enqueue(4);
+            //Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
 
-            queue.Dequeue();
-            Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
-            queue.Dequeue();
-            Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
-            queue.Enqueue(5);
-            Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
-            queue.Dequeue();
-            Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
-            queue.Dequeue();
-            Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
-            queue.Dequeue();
+            //queue.Dequeue();
+            //Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            //queue.Dequeue();
+            //Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            //queue.Enqueue(5);
+            //Console.WriteLine($"Enqueued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            //queue.Dequeue();
+            //Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            //queue.Dequeue();
+            //Console.WriteLine($"Dequeued Successful!! Peek: {queue.Peek()} First: {queue.First} Last: {queue.Last} Length: {queue.Length}");
+            //queue.Dequeue();
+
+            //**************************Binary Search Tree Implementation********************************
+            BinarySearchTree tree = new BinarySearchTree();
+            tree.Insert(9);
+            tree.Insert(4);
+            tree.Insert(6);
+            tree.Insert(20);
+            tree.Insert(170);
+            tree.Insert(15);
+            tree.Insert(1);
+            Console.WriteLine("Inserts successful");
         }
     }  
 }
