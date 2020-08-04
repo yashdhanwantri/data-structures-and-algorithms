@@ -55,14 +55,47 @@ namespace DataStructureAndAlgorithms.Trees
                     else
                         throw new Exception("Duplicate Element not allowed");
                 }
-                
+
             }
         }
-        public int? Lookup(int Data)
+        public bool ContainsData(int Data)
         {
-            
-            return null;
+            if (Lookup(Data) == null)
+                return false;
+            return true;
         }
-
+        private TreeNode Lookup(int Data)
+        {
+            if (Root == null)
+                return null;
+            else if (Root.Data == Data)
+                return Root;
+            else
+            {
+                var NodeToCompare = Root;
+                while (true)
+                {
+                    if (NodeToCompare == null)
+                        return null;
+                    else if (NodeToCompare.Data == Data)
+                    {
+                        return NodeToCompare;
+                    }
+                    else if (Data > NodeToCompare.Data)
+                    {
+                        if (NodeToCompare.Right == null)
+                            return null;
+                        NodeToCompare = NodeToCompare.Right;
+                    }
+                    else
+                    {
+                        if (NodeToCompare.Left == null)
+                            return null;
+                        NodeToCompare = NodeToCompare.Left;
+                    }
+                        
+                }
+            }
+        }
     }
 }

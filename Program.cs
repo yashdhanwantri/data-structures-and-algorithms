@@ -247,6 +247,15 @@ namespace DataStructureAndAlgorithms
             tree.Insert(170);
             tree.Insert(15);
             tree.Insert(1);
+            Console.WriteLine($"Item 15 exists:  {tree.ContainsData(15)}");
+            Console.WriteLine($"Item 9 exists: {tree.ContainsData(9)}");
+            Console.WriteLine($"Item 4 exists: {tree.ContainsData(4)}");
+            Console.WriteLine($"Item 6 exists: {tree.ContainsData(6)}");
+            Console.WriteLine($"Item 20 exists: {tree.ContainsData(20)}");
+            Console.WriteLine($"Item 170 exists: {tree.ContainsData(170)}");
+            Console.WriteLine($"Item 1 exists: {tree.ContainsData(1)}");
+            Console.WriteLine($"Item 3 exists: {tree.ContainsData(3)}");
+            Console.WriteLine($"Item 172 exists: {tree.ContainsData(172)}");
             Console.WriteLine("Inserts successful");
         }
     }  
