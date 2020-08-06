@@ -95,5 +95,81 @@ namespace DataStructureAndAlgorithms.Trees
                 return null;
             }
         }
+
+        //public bool RemoveNode(int Data)
+        //{
+        //    var NodeToRemove = Lookup(Data);
+
+        //    //If Node not found, return False
+        //    if (NodeToRemove == null)
+        //        return false;
+
+        //    var parentNode = GetParentNode(NodeToRemove);
+        //    var leftMostParentNode = GetLeftMostParentNode(NodeToRemove);
+        //    //Removal of Leaf Nodes
+        //    if (NodeToRemove.Right == null && NodeToRemove.Left == null)
+        //    {
+        //        if (parentNode.Right.Data == Data)
+        //        {
+        //            parentNode.Right = null;
+        //        }
+        //        else
+        //            parentNode.Left = null;
+        //        return true;
+        //    }
+
+        //    //Removal of Root Node
+        //    if(NodeToRemove == Root)
+        //    {
+        //        if(NodeToRemove.Right !=null)
+        //        {
+        //            var potentialRootNode = NodeToRemove.Right;
+        //            if(potentialRootNode.Left)
+        //        }
+        //        else
+        //        {
+        //            Root = NodeToRemove.Left;
+        //        }
+        //        return true;
+        //    }
+            
+        //}
+
+        private TreeNode GetParentNode(TreeNode node)
+        {
+            if (node.Data == Root.Data)
+                return null;
+            var currentNode = Root;
+            while(currentNode != null)
+            {
+                if (currentNode.Left.Data == node.Data || currentNode.Right.Data == node.Data)
+                    return currentNode;
+                if (node.Data < currentNode.Data)
+                    currentNode = currentNode.Left;
+                else
+                    currentNode = currentNode.Right;
+            }
+            return null;
+        }
+        private TreeNode GetLeftMostParentNode(TreeNode rootNode)
+        {
+            if (rootNode.Left == null)
+                return null;
+            var parentNode = rootNode;
+            var leftChildNode = rootNode.Left;
+            while(leftChildNode.Left!=null)
+            {
+                parentNode = leftChildNode;
+                leftChildNode = leftChildNode.Left;
+            }
+            return parentNode;
+        }
+
+        private bool IsNodeWithNoChild(TreeNode node)
+        {
+            if (node.Left == null && node.Right == null)
+                return true;
+            return false;
+        }
     }
 }

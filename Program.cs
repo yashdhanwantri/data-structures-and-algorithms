@@ -1,5 +1,6 @@
 ﻿using DataStructureAndAlgorithms.Arrays;
 using DataStructureAndAlgorithms.Challenges;
+using DataStructureAndAlgorithms.Graphs;
 using DataStructureAndAlgorithms.HashTable;
 using DataStructureAndAlgorithms.LinkedList;
 using DataStructureAndAlgorithms.Queue;
@@ -239,24 +240,45 @@ namespace DataStructureAndAlgorithms
             //queue.Dequeue();
 
             //**************************Binary Search Tree Implementation********************************
-            BinarySearchTree tree = new BinarySearchTree();
-            tree.Insert(9);
-            tree.Insert(4);
-            tree.Insert(6);
-            tree.Insert(20);
-            tree.Insert(170);
-            tree.Insert(15);
-            tree.Insert(1);
-            Console.WriteLine($"Item 15 exists:  {tree.ContainsData(15)}");
-            Console.WriteLine($"Item 9 exists: {tree.ContainsData(9)}");
-            Console.WriteLine($"Item 4 exists: {tree.ContainsData(4)}");
-            Console.WriteLine($"Item 6 exists: {tree.ContainsData(6)}");
-            Console.WriteLine($"Item 20 exists: {tree.ContainsData(20)}");
-            Console.WriteLine($"Item 170 exists: {tree.ContainsData(170)}");
-            Console.WriteLine($"Item 1 exists: {tree.ContainsData(1)}");
-            Console.WriteLine($"Item 3 exists: {tree.ContainsData(3)}");
-            Console.WriteLine($"Item 172 exists: {tree.ContainsData(172)}");
-            Console.WriteLine("Inserts successful");
+            //    BinarySearchTree tree = new BinarySearchTree();
+            //    tree.Insert(9);
+            //    tree.Insert(4);
+            //    tree.Insert(6);
+            //    tree.Insert(20);
+            //    tree.Insert(170);
+            //    tree.Insert(15);
+            //    tree.Insert(1);
+            //    Console.WriteLine($"Item 15 exists:  {tree.ContainsData(15)}");
+            //    Console.WriteLine($"Item 9 exists: {tree.ContainsData(9)}");
+            //    Console.WriteLine($"Item 4 exists: {tree.ContainsData(4)}");
+            //    Console.WriteLine($"Item 6 exists: {tree.ContainsData(6)}");
+            //    Console.WriteLine($"Item 20 exists: {tree.ContainsData(20)}");
+            //    Console.WriteLine($"Item 170 exists: {tree.ContainsData(170)}");
+            //    Console.WriteLine($"Item 1 exists: {tree.ContainsData(1)}");
+            //    Console.WriteLine($"Item 3 exists: {tree.ContainsData(3)}");
+            //    Console.WriteLine($"Item 172 exists: {tree.ContainsData(172)}");
+            //    Console.WriteLine("Inserts successful");
+            //
+
+            //********************Graphs Implementation***********************
+
+            MyGraph myGraph = new MyGraph();
+            myGraph.AddVertex(0);
+            myGraph.AddVertex(1);
+            myGraph.AddVertex(2);
+            myGraph.AddVertex(3);
+            myGraph.AddVertex(4);
+            myGraph.AddVertex(5);
+            myGraph.AddVertex(6);
+            myGraph.AddEdge(3, 1);
+            myGraph.AddEdge(3, 4);
+            myGraph.AddEdge(4, 2);
+            myGraph.AddEdge(4, 5);
+            myGraph.AddEdge(1, 2);
+            myGraph.AddEdge(1, 0);
+            myGraph.AddEdge(0, 2);
+            myGraph.AddEdge(6, 5);
+            myGraph.showConnections();
         }
     }  
 }
