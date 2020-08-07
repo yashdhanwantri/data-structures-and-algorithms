@@ -53,7 +53,6 @@ namespace DataStructureAndAlgorithms.Graphs
     public class AdjacentData
     {
         public List<GraphNode> Connections;
-        
     }
     public class GraphNode
     {
