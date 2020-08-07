@@ -4,6 +4,7 @@ using DataStructureAndAlgorithms.Graphs;
 using DataStructureAndAlgorithms.HashTable;
 using DataStructureAndAlgorithms.LinkedList;
 using DataStructureAndAlgorithms.Queue;
+using DataStructureAndAlgorithms.Recursion;
 using DataStructureAndAlgorithms.Stack;
 using DataStructureAndAlgorithms.Trees;
 using System;
@@ -262,23 +263,28 @@ namespace DataStructureAndAlgorithms
 
             //********************Graphs Implementation***********************
 
-            MyGraph myGraph = new MyGraph();
-            myGraph.AddVertex(0);
-            myGraph.AddVertex(1);
-            myGraph.AddVertex(2);
-            myGraph.AddVertex(3);
-            myGraph.AddVertex(4);
-            myGraph.AddVertex(5);
-            myGraph.AddVertex(6);
-            myGraph.AddEdge(3, 1);
-            myGraph.AddEdge(3, 4);
-            myGraph.AddEdge(4, 2);
-            myGraph.AddEdge(4, 5);
-            myGraph.AddEdge(1, 2);
-            myGraph.AddEdge(1, 0);
-            myGraph.AddEdge(0, 2);
-            myGraph.AddEdge(6, 5);
-            myGraph.showConnections();
+            //MyGraph myGraph = new MyGraph();
+            //myGraph.AddVertex(0);
+            //myGraph.AddVertex(1);
+            //myGraph.AddVertex(2);
+            //myGraph.AddVertex(3);
+            //myGraph.AddVertex(4);
+            //myGraph.AddVertex(5);
+            //myGraph.AddVertex(6);
+            //myGraph.AddEdge(3, 1);
+            //myGraph.AddEdge(3, 4);
+            //myGraph.AddEdge(4, 2);
+            //myGraph.AddEdge(4, 5);
+            //myGraph.AddEdge(1, 2);
+            //myGraph.AddEdge(1, 0);
+            //myGraph.AddEdge(0, 2);
+            //myGraph.AddEdge(6, 5);
+            //myGraph.showConnections();
+
+            //*********************Recursion Exercises**************************
+            //Console.WriteLine(RecursionExercise1.Inception());
+            Console.WriteLine($"Factorial of 5 is: {RecursionExercise1.FactorialWithoutRecursion(6)}");
+            Console.WriteLine($"Factorial of 6 is {RecursionExercise1.Factorial(5)}");
         }
     }  
 }
