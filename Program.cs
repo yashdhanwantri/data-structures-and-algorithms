@@ -304,8 +304,14 @@ namespace DataStructureAndAlgorithms
 
             //*********************Bubble Sort*******************************
             
-            int[] result = BubbleSort.Sort(new int[] {10,2,12,1,9,14,6,5 ,2,10,14});
-            foreach(var item in result)
+            //int[] result = BubbleSort.Sort(new int[] {10,2,12,1,9,14,6,5 ,2,10,14});
+            //foreach(var item in result)
+            //    Console.WriteLine(item);
+
+            //*********************My Sort*******************************
+
+            int[] result = MySort.Sort(new int[] { 10, 2, 12, 1, 9, 14, 6, 5, 2, 10, 14 });
+            foreach (var item in result)
                 Console.WriteLine(item);
         }
     }
