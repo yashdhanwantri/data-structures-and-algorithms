@@ -5,6 +5,7 @@ using DataStructureAndAlgorithms.HashTable;
 using DataStructureAndAlgorithms.LinkedList;
 using DataStructureAndAlgorithms.Queue;
 using DataStructureAndAlgorithms.Recursion;
+using DataStructureAndAlgorithms.Sorting;
 using DataStructureAndAlgorithms.Stack;
 using DataStructureAndAlgorithms.Trees;
 using System;
@@ -298,9 +299,14 @@ namespace DataStructureAndAlgorithms
             //Console.WriteLine($"[Recursive] Element at given Index is: {RecursionExercise1.Fibonacci(8)}");
 
             //*******************Reverse a String using Recursion**************************
-            Console.WriteLine(RecursionExercise1.ReverseString("Kavya"));
+            //Console.WriteLine(RecursionExercise1.ReverseString("Kavya"));
 
-                
+
+            //*********************Bubble Sort*******************************
+            
+            int[] result = BubbleSort.Sort(new int[] {10,2,12,1,9,14,6,5 ,2,10,14});
+            foreach(var item in result)
+                Console.WriteLine(item);
         }
     }
 }
