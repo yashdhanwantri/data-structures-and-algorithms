@@ -1,14 +1,21 @@
-﻿using System;
+﻿using DataStructureAndAlgorithms.Arrays;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DataStructureAndAlgorithms.Trees
 {
-    internal class TreeNode
+    public abstract class MyClass
     {
-        internal int Data { get; set; }
-        internal TreeNode Left { get; set; }
-        internal TreeNode Right { get; set; }
+        int coordinatesX;
+        int coordinatesY;
+    }
+
+    public class TreeNode
+    {
+        public int Data { get; internal set; }
+        public TreeNode Left { get; internal set; }
+        public TreeNode Right { get; internal set; }
         internal TreeNode(int Data)
         {
             this.Data = Data;
@@ -18,7 +25,7 @@ namespace DataStructureAndAlgorithms.Trees
     }
     public class BinarySearchTree
     {
-        TreeNode Root { get; set; }
+        public TreeNode Root { get; private set; }
         public BinarySearchTree()
         {
             Root = null;
@@ -73,7 +80,7 @@ namespace DataStructureAndAlgorithms.Trees
             else
             {
                 var NodeToCompare = Root;
-                while (NodeToCompare!=null)
+                while (NodeToCompare != null)
                 {
                     if (NodeToCompare.Data == Data)
                     {
@@ -94,6 +101,22 @@ namespace DataStructureAndAlgorithms.Trees
                 }
                 return null;
             }
+        }
+
+        public TreeNode Traverse(TreeNode Node)
+        {
+            Console.WriteLine($" {Node.Data} ");
+            if (Node.Right == null && Node.Left == null)
+                return Node;
+            if (Node.Left != null)
+            {
+                Traverse(Node.Left);
+            }
+            if (Node.Right!= null)
+            {
+                Traverse(Node.Right);
+            }
+            return Node;
         }
 
         //public bool RemoveNode(int Data)
@@ -132,7 +155,7 @@ namespace DataStructureAndAlgorithms.Trees
         //        }
         //        return true;
         //    }
-            
+
         //}
 
         private TreeNode GetParentNode(TreeNode node)
@@ -140,7 +163,7 @@ namespace DataStructureAndAlgorithms.Trees
             if (node.Data == Root.Data)
                 return null;
             var currentNode = Root;
-            while(currentNode != null)
+            while (currentNode != null)
             {
                 if (currentNode.Left.Data == node.Data || currentNode.Right.Data == node.Data)
                     return currentNode;
@@ -157,7 +180,7 @@ namespace DataStructureAndAlgorithms.Trees
                 return null;
             var parentNode = rootNode;
             var leftChildNode = rootNode.Left;
-            while(leftChildNode.Left!=null)
+            while (leftChildNode.Left != null)
             {
                 parentNode = leftChildNode;
                 leftChildNode = leftChildNode.Left;

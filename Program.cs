@@ -241,14 +241,20 @@ namespace DataStructureAndAlgorithms
             //queue.Dequeue();
 
             //**************************Binary Search Tree Implementation********************************
-            //    BinarySearchTree tree = new BinarySearchTree();
-            //    tree.Insert(9);
-            //    tree.Insert(4);
-            //    tree.Insert(6);
-            //    tree.Insert(20);
-            //    tree.Insert(170);
-            //    tree.Insert(15);
-            //    tree.Insert(1);
+            //BinarySearchTree tree = new BinarySearchTree();
+            //tree.Insert(9);
+            //tree.Insert(4);
+            //tree.Insert(6);
+            //tree.Insert(20);
+            //tree.Insert(170);
+            //tree.Insert(15);
+            //tree.Insert(1);
+            //tree.Insert(13);
+            //tree.Insert(19);
+            //tree.Insert(80);
+            //tree.Insert(200);
+            //tree.Traverse(tree.Root);
+
             //    Console.WriteLine($"Item 15 exists:  {tree.ContainsData(15)}");
             //    Console.WriteLine($"Item 9 exists: {tree.ContainsData(9)}");
             //    Console.WriteLine($"Item 4 exists: {tree.ContainsData(4)}");
@@ -287,8 +293,8 @@ namespace DataStructureAndAlgorithms
             //Console.WriteLine($"Factorial of 6 is {RecursionExercise1.Factorial(5)}");
 
             // ********************Factorial
-            Console.WriteLine($"Element at given Index is: {RecursionExercise1.FibonacciWithoutRecursion(8)}");
-            Console.WriteLine($"[Recursive] Element at given Index is: {RecursionExercise1.Fibonacci(8)}");
+            //Console.WriteLine($"Element at given Index is: {RecursionExercise1.FibonacciWithoutRecursion(8)}");
+            //Console.WriteLine($"[Recursive] Element at given Index is: {RecursionExercise1.Fibonacci(8)}");
         }
     }
 }
