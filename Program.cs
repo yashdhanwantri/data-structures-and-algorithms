@@ -283,9 +283,12 @@ namespace DataStructureAndAlgorithms
 
             //*********************Recursion Exercises**************************
             //Console.WriteLine(RecursionExercise1.Inception());
-            Console.WriteLine($"Factorial of 5 is: {RecursionExercise1.FactorialWithoutRecursion(6)}");
-            Console.WriteLine($"Factorial of 6 is {RecursionExercise1.Factorial(5)}");
+            //Console.WriteLine($"Factorial of 5 is: {RecursionExercise1.FactorialWithoutRecursion(6)}");
+            //Console.WriteLine($"Factorial of 6 is {RecursionExercise1.Factorial(5)}");
+
+            // ********************Factorial
+            Console.WriteLine($"Element at given Index is: {RecursionExercise1.FibonacciWithoutRecursion(8)}");
+            Console.WriteLine($"[Recursive] Element at given Index is: {RecursionExercise1.Fibonacci(8)}");
         }
-    }  
+    }
 }
- 

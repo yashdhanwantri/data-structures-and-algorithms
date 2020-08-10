@@ -34,5 +34,31 @@ namespace DataStructureAndAlgorithms.Recursion
             return number * Factorial(number - 1);
             
         }
+
+        public static int FibonacciWithoutRecursion(int number)
+        {
+            if (number == 0 || number == 1)
+                return number;
+            int firstNumber = 0;
+            int secondNumber = 1;
+            int result = 0;
+            Console.Write($"{firstNumber} {secondNumber}");
+            for(int i=2;i<=number;i++)
+            {
+                result = firstNumber + secondNumber;
+                firstNumber = secondNumber;
+                secondNumber = result;
+                Console.Write($" {result}");
+            }
+            Console.WriteLine();
+            return result;
+        }
+        
+        public static int Fibonacci(int number)
+        {
+            if (number < 2)
+                return number;
+            return Fibonacci(number - 1) + Fibonacci(number - 2);
+        }
     }
 }
