@@ -60,5 +60,13 @@ namespace DataStructureAndAlgorithms.Recursion
                 return number;
             return Fibonacci(number - 1) + Fibonacci(number - 2);
         }
+
+        public static string ReverseString(string input)
+        {
+            if (input.Length == 1)
+                return input;
+            return ReverseString(input[input.Length - 1].ToString()) + ReverseString(input.Substring(0, input.Length - 1));
+        }
+
     }
 }
