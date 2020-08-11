@@ -8,38 +8,36 @@ namespace DataStructureAndAlgorithms.Sorting
     {
         public static int[] Sort(int[] input)
         {
-            if (input[1] < input[0])
+            for (int i = 1; i < input.Length; i++)
             {
-                var temp = input[0];
-                input[0] = input[1];
-                input[1] = temp;
-            }
-            for (int i = 2;i<input.Length-1; i++)
-            {
-                for(int j =i-1;j>=0;j--)
-                {
-                    //When item needs to be inserted at first place
-                    if(j==0 && input[i]<=input[j])
-                    {
-                        var temp = input[i];
-                        for (int k= i; k>j; k--)
-                        {
-                            input[k] = input[k - 1];
-                        }
-                        input[0] = temp;
-                    }
+                var temp = input[i];
 
-                    //When Item needs to be inserted in between of 2 items
-                    if (input[i] <= input[j] && input[i] > input[j-1])
+                //When Item is smaller than the first element in an array i.e. Inserting at first index.
+                if(input[i]< input[0])
+                {
+                    for(int j = i;j>0;j--)
                     {
-                        var temp = input[i];
-                        for (int k = i; k > j; k--)
+                        input[j] = input[j - 1];
+                    }
+                    input[0] = temp;
+                }
+
+                //When Item needs to be inserted in between of 2 items
+                else
+                {
+                    for(int j=1;j<i;j++)
+                    {
+                        if (input[i] <= input[j] && input[i] > input[j - 1])
                         {
-                            input[k] = input[k - 1];
+                            for (int k = i; k > j; k--)
+                            {
+                                input[k] = input[k - 1];
+                            }
+                            input[j] = temp;
                         }
-                        input[j] = temp;
                     }
                 }
+                
             }
             return input;
         }
