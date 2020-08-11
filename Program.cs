@@ -5,6 +5,7 @@ using DataStructureAndAlgorithms.HashTable;
 using DataStructureAndAlgorithms.LinkedList;
 using DataStructureAndAlgorithms.Queue;
 using DataStructureAndAlgorithms.Recursion;
+using DataStructureAndAlgorithms.Searching;
 using DataStructureAndAlgorithms.Sorting;
 using DataStructureAndAlgorithms.Stack;
 using DataStructureAndAlgorithms.Trees;
@@ -323,6 +324,19 @@ namespace DataStructureAndAlgorithms
             //int[] result = InsertionSort.Sort(new int[] { 10, 2, 12, 1, 9, 14, 6, 5, 2, 10, 14 });
             //foreach (var item in result)
             //    Console.WriteLine(item);
+
+            //*********************Linear Search*********************************
+            //int[] input = new int[] { 10, 2, 12, 1, 9, 14, 6, 5, 2, 10, 14 };
+            //Console.WriteLine($"Item {99} exists in List: {LinearSearch.FindElement(99, input)}");
+
+            //*********************Binary Search*********************************
+            int[] input = new int[] { 1,2,3,4,5 };
+            Console.WriteLine($"Item 1 exists in List: {BinarySearch.FindElement(1, input)}");
+            Console.WriteLine($"Item 2 exists in List: {BinarySearch.FindElement(2, input)}");
+            Console.WriteLine($"Item 3 exists in List: {BinarySearch.FindElement(3, input)}");
+            Console.WriteLine($"Item 4 exists in List: {BinarySearch.FindElement(4, input)}");
+            Console.WriteLine($"Item 5 exists in List: {BinarySearch.FindElement(5, input)}");
+            Console.WriteLine($"Item 6 exists in List: {BinarySearch.FindElement(6, input)}");
         }
     }
 }
