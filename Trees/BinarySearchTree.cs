@@ -150,7 +150,71 @@ namespace DataStructureAndAlgorithms.Trees
                 myQueue.Enqueue(currentNode.Right);
             return BreadthFirstSearchRecursive(myQueue, results);
         }
+        
+        public void DepthFirstSortInOrder()
+        {
+            var result = TraverseInOrder(Root, new List<TreeNode>());
+            foreach (var item in result)
+                Console.WriteLine(item.Data);
+        }
 
+        public void DepthFirstSortPreOrder()
+        {
+            var result = TraversePreOrder(Root, new List<TreeNode>());
+            foreach (var item in result)
+                Console.WriteLine(item.Data);
+        }
+
+        public void DepthFirstSortPostOrder()
+        {
+            var result = TraversePostOrder(Root, new List<TreeNode>());
+            foreach (var item in result)
+                Console.WriteLine(item.Data);
+
+        }
+
+        public List<TreeNode> TraverseInOrder(TreeNode Node, List<TreeNode> ResultList)
+        {
+            //Console.WriteLine(Node.Data);
+            if(Node.Left!= null)
+            {
+                TraverseInOrder(Node.Left, ResultList);
+            }
+            ResultList.Add(Node);
+            if(Node.Right!=null)
+            {
+                TraverseInOrder(Node.Right, ResultList);
+            }
+            return ResultList;
+        }
+
+        public List<TreeNode> TraversePreOrder(TreeNode Node, List<TreeNode> ResultList)
+        {
+            ResultList.Add(Node);
+            if (Node.Left != null)
+            {
+                TraversePreOrder(Node.Left, ResultList);
+            }
+            if (Node.Right != null)
+            {
+                TraversePreOrder(Node.Right, ResultList);
+            }
+            return ResultList;
+        }
+
+        public List<TreeNode> TraversePostOrder(TreeNode Node, List<TreeNode> ResultList)
+        {
+            if (Node.Left != null)
+            {
+                TraversePostOrder(Node.Left, ResultList);
+            }
+            if (Node.Right != null)
+            {
+                TraversePostOrder(Node.Right, ResultList);
+            }
+            ResultList.Add(Node);
+            return ResultList;
+        }
         //public bool RemoveNode(int Data)
         //{
         //    var NodeToRemove = Lookup(Data);

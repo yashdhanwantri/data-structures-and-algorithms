@@ -340,6 +340,34 @@ namespace DataStructureAndAlgorithms
             //Console.WriteLine($"Item 6 exists in List: {BinarySearch.FindElement(6, input)}");
 
             //**************************** Breadth First Search ****************************
+            //BinarySearchTree myTree = new BinarySearchTree();
+            //myTree.Insert(9);
+            //myTree.Insert(4);
+            //myTree.Insert(20);
+            //myTree.Insert(1);
+            //myTree.Insert(6);
+            //myTree.Insert(15);
+            //myTree.Insert(170);
+            //var result = myTree.BreadthFirstSearch();
+            //foreach(var item in result)
+            //{
+            //    Console.WriteLine(item.Data);
+            //}
+
+            //var myQueue = new MyQueue<TreeNode>();
+
+            //myQueue.Enqueue(myTree.Root);
+
+            //var resultRecursive = myTree.BreadthFirstSearchRecursive(myQueue, new List<TreeNode>());
+
+            //Console.WriteLine("Recursive Approach");
+            //foreach (var item in resultRecursive)
+            //{
+            //    Console.WriteLine(item.Data);
+            //}
+
+            //****************************Depth First Search*****************************
+            //**************************** Breadth First Search ****************************
             BinarySearchTree myTree = new BinarySearchTree();
             myTree.Insert(9);
             myTree.Insert(4);
@@ -348,23 +376,12 @@ namespace DataStructureAndAlgorithms
             myTree.Insert(6);
             myTree.Insert(15);
             myTree.Insert(170);
-            var result = myTree.BreadthFirstSearch();
-            foreach(var item in result)
-            {
-                Console.WriteLine(item.Data);
-            }
-
-            var myQueue = new MyQueue<TreeNode>();
-
-            myQueue.Enqueue(myTree.Root);
-
-            var resultRecursive = myTree.BreadthFirstSearchRecursive(myQueue, new List<TreeNode>());
-
-            Console.WriteLine("Recursive Approach");
-            foreach (var item in resultRecursive)
-            {
-                Console.WriteLine(item.Data);
-            }
+            Console.WriteLine("DFS In Order");
+            myTree.DepthFirstSortInOrder();
+            Console.WriteLine("DFS Pre Order");
+            myTree.DepthFirstSortPreOrder();
+            Console.WriteLine("DFS Post Order");
+            myTree.DepthFirstSortPostOrder();
         }
     }
 }
