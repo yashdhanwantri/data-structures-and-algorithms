@@ -138,10 +138,18 @@ namespace DataStructureAndAlgorithms.Trees
             return listOfItems;
         }
 
-        //public List<TreeNode> BreadthFirstSearchRecursive(MyQueue<TreeNode node)
-        //{
-        //    if()
-        //}
+        public List<TreeNode> BreadthFirstSearchRecursive(MyQueue<TreeNode> myQueue, List<TreeNode> results)
+        {
+            if (myQueue.Length == 0)
+                return results;
+            var currentNode = myQueue.Dequeue();
+            results.Add(currentNode);
+            if (currentNode.Left != null)
+                myQueue.Enqueue(currentNode.Left);
+            if (currentNode.Right != null)
+                myQueue.Enqueue(currentNode.Right);
+            return BreadthFirstSearchRecursive(myQueue, results);
+        }
 
         //public bool RemoveNode(int Data)
         //{

@@ -10,6 +10,7 @@ using DataStructureAndAlgorithms.Sorting;
 using DataStructureAndAlgorithms.Stack;
 using DataStructureAndAlgorithms.Trees;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace DataStructureAndAlgorithms
@@ -349,6 +350,14 @@ namespace DataStructureAndAlgorithms
             myTree.Insert(170);
             var result = myTree.BreadthFirstSearch();
             foreach(var item in result)
+            {
+                Console.WriteLine(item.Data);
+            }
+            var myQueue = new MyQueue<TreeNode>();
+            myQueue.Enqueue(myTree.Root);
+            var resultRecursive = myTree.BreadthFirstSearchRecursive(myQueue, new List<TreeNode>());
+            Console.WriteLine("Recursive Approach");
+            foreach (var item in result)
             {
                 Console.WriteLine(item.Data);
             }
