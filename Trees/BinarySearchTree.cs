@@ -1,4 +1,5 @@
 ﻿using DataStructureAndAlgorithms.Arrays;
+using DataStructureAndAlgorithms.Queue;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -118,6 +119,29 @@ namespace DataStructureAndAlgorithms.Trees
             }
             return Node;
         }
+
+        public List<TreeNode> BreadthFirstSearch()
+        {
+            TreeNode currentNode = Root;
+            List<TreeNode> listOfItems = new List<TreeNode>();
+            MyQueue<TreeNode> myQueue = new MyQueue<TreeNode>();
+            myQueue.Enqueue(currentNode);
+            while(myQueue.Length>0)
+            {
+                currentNode = myQueue.Dequeue();
+                listOfItems.Add(currentNode);
+                if (currentNode.Left != null)
+                    myQueue.Enqueue(currentNode.Left);
+                if (currentNode.Right != null)
+                    myQueue.Enqueue(currentNode.Right);
+            }
+            return listOfItems;
+        }
+
+        //public List<TreeNode> BreadthFirstSearchRecursive(MyQueue<TreeNode node)
+        //{
+        //    if()
+        //}
 
         //public bool RemoveNode(int Data)
         //{

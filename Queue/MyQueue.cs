@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructureAndAlgorithms.Trees;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -36,25 +37,28 @@ namespace DataStructureAndAlgorithms.Queue
             Length++;
             Console.WriteLine($"First Item: {First.Data}. Last Item: {Last.Data}. Length: {Length}");
         }
-        public void Dequeue()
+        public T Dequeue()
         {
-            if(Length == 0)
+            if (Length == 0)
                 Console.WriteLine("Queue Empty");
             else
             {
-                Console.WriteLine($"Item: {First.Data} dequeued");
-                First = First.Next;
-                Length--;
                 try
                 {
+                    Console.WriteLine($"Item: {First.Data} dequeued");
+                    var result = First;
+                    if (First.Next != null)
+                        First = First.Next;
+                    Length--;
                     Console.WriteLine($"First Item: {First.Data}. Last Item: {Last.Data}. Length: {Length}");
+                    return result.Data;
                 }
                 catch
                 {
                     Console.WriteLine("Queue Empty");
                 }
-                
             }
+            return default;
         }
 
         public void Peek()

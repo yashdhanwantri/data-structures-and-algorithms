@@ -330,13 +330,28 @@ namespace DataStructureAndAlgorithms
             //Console.WriteLine($"Item {99} exists in List: {LinearSearch.FindElement(99, input)}");
 
             //*********************Binary Search*********************************
-            int[] input = new int[] { 1,2,3,4,5 };
-            Console.WriteLine($"Item 1 exists in List: {BinarySearch.FindElement(1, input)}");
-            Console.WriteLine($"Item 2 exists in List: {BinarySearch.FindElement(2, input)}");
-            Console.WriteLine($"Item 3 exists in List: {BinarySearch.FindElement(3, input)}");
-            Console.WriteLine($"Item 4 exists in List: {BinarySearch.FindElement(4, input)}");
-            Console.WriteLine($"Item 5 exists in List: {BinarySearch.FindElement(5, input)}");
-            Console.WriteLine($"Item 6 exists in List: {BinarySearch.FindElement(6, input)}");
+            //int[] input = new int[] { 1,2,3,4,5 };
+            //Console.WriteLine($"Item 1 exists in List: {BinarySearch.FindElement(1, input)}");
+            //Console.WriteLine($"Item 2 exists in List: {BinarySearch.FindElement(2, input)}");
+            //Console.WriteLine($"Item 3 exists in List: {BinarySearch.FindElement(3, input)}");
+            //Console.WriteLine($"Item 4 exists in List: {BinarySearch.FindElement(4, input)}");
+            //Console.WriteLine($"Item 5 exists in List: {BinarySearch.FindElement(5, input)}");
+            //Console.WriteLine($"Item 6 exists in List: {BinarySearch.FindElement(6, input)}");
+
+            //**************************** Breadth First Search ****************************
+            BinarySearchTree myTree = new BinarySearchTree();
+            myTree.Insert(9);
+            myTree.Insert(4);
+            myTree.Insert(20);
+            myTree.Insert(1);
+            myTree.Insert(6);
+            myTree.Insert(15);
+            myTree.Insert(170);
+            var result = myTree.BreadthFirstSearch();
+            foreach(var item in result)
+            {
+                Console.WriteLine(item.Data);
+            }
         }
     }
 }
