@@ -315,7 +315,12 @@ namespace DataStructureAndAlgorithms
             //    Console.WriteLine(item);
 
             //*********************Selection Sort ***************************
-            int[] result = SelectionSort.Sort(new int[] { 10, 2, 12, 1, 9, 14, 6, 5, 2, 10, 14 });
+            //int[] result = SelectionSort.Sort(new int[] { 10, 2, 12, 1, 9, 14, 6, 5, 2, 10, 14 });
+            //foreach (var item in result)
+            //    Console.WriteLine(item);
+
+            //**********************Insertion Sort*******************************
+            int[] result = InsertionSort.Sort(new int[] { 10, 2, 12, 1, 9, 14, 6, 5, 2, 10, 14 });
             foreach (var item in result)
                 Console.WriteLine(item);
         }
