@@ -353,11 +353,15 @@ namespace DataStructureAndAlgorithms
             {
                 Console.WriteLine(item.Data);
             }
+
             var myQueue = new MyQueue<TreeNode>();
+
             myQueue.Enqueue(myTree.Root);
+
             var resultRecursive = myTree.BreadthFirstSearchRecursive(myQueue, new List<TreeNode>());
+
             Console.WriteLine("Recursive Approach");
-            foreach (var item in result)
+            foreach (var item in resultRecursive)
             {
                 Console.WriteLine(item.Data);
             }
