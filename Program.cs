@@ -368,20 +368,33 @@ namespace DataStructureAndAlgorithms
 
             //****************************Depth First Search*****************************
             //**************************** Breadth First Search ****************************
-            BinarySearchTree myTree = new BinarySearchTree();
-            myTree.Insert(9);
-            myTree.Insert(4);
-            myTree.Insert(20);
-            myTree.Insert(1);
-            myTree.Insert(6);
-            myTree.Insert(15);
-            myTree.Insert(170);
-            Console.WriteLine("DFS In Order");
-            myTree.DepthFirstSortInOrder();
-            Console.WriteLine("DFS Pre Order");
-            myTree.DepthFirstSortPreOrder();
-            Console.WriteLine("DFS Post Order");
-            myTree.DepthFirstSortPostOrder();
+            //BinarySearchTree myTree = new BinarySearchTree();
+            //myTree.Insert(9);
+            //myTree.Insert(4);
+            //myTree.Insert(20);
+            //myTree.Insert(1);
+            //myTree.Insert(6);
+            //myTree.Insert(15);
+            //myTree.Insert(170);
+            //Console.WriteLine("DFS In Order");
+            //myTree.DepthFirstSortInOrder();
+            //Console.WriteLine("DFS Pre Order");
+            //myTree.DepthFirstSortPreOrder();
+            //Console.WriteLine("DFS Post Order");
+            //myTree.DepthFirstSortPostOrder();
+
+            //*************************Challenge AddTwoNumbersLinkedList**************************
+            AddTwoNumbersLinkedList challenge = new AddTwoNumbersLinkedList();
+            var result = challenge.AddTwoNumbers(new ListNode(1), new ListNode(8));
+            Console.Write("[ ");
+            while (result != null)
+            {
+                Console.Write(result.val);
+                result = result.next;
+                if (result != null)
+                    Console.Write(", ");
+            }
+                
         }
     }
 }
