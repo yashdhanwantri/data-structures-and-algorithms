@@ -30,7 +30,7 @@ namespace DataStructureAndAlgorithms.Challenges
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             int carryToBeAdded = 0;
-            ListNode result = null;
+            ListNode result;
             if (l1.val + l2.val > 9)
             {
                 result = new ListNode((l1.val + l2.val) % 10);
