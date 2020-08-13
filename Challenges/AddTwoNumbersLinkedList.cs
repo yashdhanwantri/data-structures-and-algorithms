@@ -57,8 +57,8 @@ namespace DataStructureAndAlgorithms.Challenges
                     carryToBeAdded = 0;
                 }
                 nextResultNode = nextResultNode.next;
-                l1 = l1.next;
-                l2 = l2.next;
+                l1 = l1?.next;
+                l2 = l2?.next;
             }
 
             if (carryToBeAdded > 0)

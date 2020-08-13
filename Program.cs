@@ -386,7 +386,7 @@ namespace DataStructureAndAlgorithms
             //*************************Challenge AddTwoNumbersLinkedList**************************
             AddTwoNumbersLinkedList challenge = new AddTwoNumbersLinkedList();
             var result = challenge.AddTwoNumbers(new ListNode(1), new ListNode(8));
-            Console.Write("[ ");
+            Console.Write("[");
             while (result != null)
             {
                 Console.Write(result.val);
@@ -394,7 +394,7 @@ namespace DataStructureAndAlgorithms
                 if (result != null)
                     Console.Write(", ");
             }
-                
+            Console.Write("]");
         }
     }
 }
